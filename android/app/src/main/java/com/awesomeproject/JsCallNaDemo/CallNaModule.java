@@ -1,4 +1,4 @@
-package com.awesomeproject;
+package com.awesomeproject.JsCallNaDemo;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,21 +15,21 @@ import android.widget.Toast;
 /**
  * liuzhenhui 16/4/22.下午2:09
  */
-public class MyToastModule extends ReactContextBaseJavaModule {
-    private static final String MODULE_NAME = "MyToastModule";
+public class CallNaModule extends ReactContextBaseJavaModule {
+    private static final String MODULE_NAME = "CallNaModule";
 
     private static final String DURATION_SHORT_KEY = "SHORT";
     private static final String DURATION_LONG_KEY = "LONG";
 
-    public MyToastModule(ReactApplicationContext reactContext) {
+    public CallNaModule(ReactApplicationContext reactContext) {
         super(reactContext);
     }
 
     @ReactMethod
-    public void show(String message, int duration) {
-        //        Toast.makeText(getReactApplicationContext(), message, duration).show();
+    public void call(String message, int duration) {
+        Toast.makeText(getReactApplicationContext(), message, duration).show();
         if (getCurrentActivity() != null) {
-            Intent intent = new Intent(getCurrentActivity(), AnotherActivity.class);
+            Intent intent = new Intent(getCurrentActivity(), NaActivity.class);
             intent.putExtra("extra", message);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             getReactApplicationContext().startActivity(intent);

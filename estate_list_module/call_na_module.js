@@ -8,4 +8,4 @@
  * 2. int duration: The duration of the toast. May be ToastAndroid.SHORT or ToastAndroid.LONG
  */
 var { NativeModules } = require('react-native');
-module.exports = NativeModules.MyToastModule;
+module.exports = NativeModules.CallNaModule;

@@ -12,7 +12,7 @@ var {
 } = React;
 
 var styles = require('./styles');
-var Toast = require('./MyToast')
+var CallNaModule = require('./call_na_module')
 
 var REQUEST_URL = 'http://mbcapi.baidu.com/mbc/?__c=dal&method=houseList&rt=houselist'
 +'&bid=cc788fde9579bd8988fc0628,87be1cf3ab5b3f64e60738f5,c7b220c24dc08ff6c7f50d2a'
@@ -42,7 +42,7 @@ var ListViewModule = React.createClass({
   },
 
   _pressRow: function(rowToast: string) {
-    Toast.show(rowToast, Toast.SHORT);
+    CallNaModule.call(rowToast, CallNaModule.SHORT);
   },
 
   render: function() {

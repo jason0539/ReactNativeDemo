@@ -4,3 +4,4 @@ android/.idea/*
 android/app/build/*
 node_modules/*
 *.iml
+android/build/intermediates/*

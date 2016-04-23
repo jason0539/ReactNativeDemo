@@ -1,4 +1,4 @@
-package com.awesomeproject;
+package com.awesomeproject.JsCallNaDemo;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -8,14 +8,12 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
-import com.facebook.react.modules.toast.*;
-import com.facebook.react.modules.toast.ToastModule;
 import com.facebook.react.uimanager.ViewManager;
 
 /**
  * liuzhenhui 16/4/22.下午2:16
  */
-public class AnExampleReactPackage implements ReactPackage {
+public class CallNaReactPackage implements ReactPackage {
     /**
      * @param reactContext react application context that can be used to create modules
      *
@@ -24,7 +22,7 @@ public class AnExampleReactPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
-        modules.add(new MyToastModule(reactContext));
+        modules.add(new CallNaModule(reactContext));
         return modules;
     }
 
