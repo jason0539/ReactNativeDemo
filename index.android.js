@@ -10,10 +10,8 @@
 
 var React = require('react-native');
 
-var {
-  AppRegistry,
-} = React;
+var CallNaModule = require('./example_modules/callna_example/index');
+var NavigatorModule = require('./example_modules/navigator_example/index');
 
-var ListViewModule = require('./estate_list_module/index');
-
-AppRegistry.registerComponent('AwesomeProject', () => ListViewModule);
+React.AppRegistry.registerComponent('CallNaActivity', () => CallNaModule);
+React.AppRegistry.registerComponent('NavigatorActivity', () => NavigatorModule);

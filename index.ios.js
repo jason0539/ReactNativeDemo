@@ -1,53 +1,21 @@
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
- * @flow
  */
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ */
+'use strict';
 
-import React, {
+var React = require('react-native');
+
+var {
   AppRegistry,
-  Component,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+} = React;
 
-class AwesomeProject extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
-    );
-  }
-}
+var CallNaListViewModule = require('./example_modules/callna_example/index');
+var PropertyFinderApp = require('./example_modules/navigator_example/index');
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
-
-AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
+AppRegistry.registerComponent('CallNaActivity', () => CallNaListViewModule);
+AppRegistry.registerComponent('NavigatorActivity', () => PropertyFinderApp);

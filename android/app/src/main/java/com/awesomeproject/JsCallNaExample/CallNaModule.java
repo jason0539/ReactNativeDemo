@@ -1,4 +1,4 @@
-package com.awesomeproject.JsCallNaDemo;
+package com.awesomeproject.JsCallNaExample;
 
 import java.util.HashMap;
 import java.util.Map;

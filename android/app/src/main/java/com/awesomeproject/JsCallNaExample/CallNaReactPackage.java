@@ -1,4 +1,4 @@
-package com.awesomeproject.JsCallNaDemo;
+package com.awesomeproject.JsCallNaExample;
 
 import java.util.ArrayList;
 import java.util.Collections;

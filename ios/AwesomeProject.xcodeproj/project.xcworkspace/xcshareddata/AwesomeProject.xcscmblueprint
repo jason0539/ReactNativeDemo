@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D67BAA0B2862DE2177BBC2A0ECE5B4E14AA03707",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E973FD01CB7CF706E2DC8FE96BC3438D812558C3" : 0,
+    "D67BAA0B2862DE2177BBC2A0ECE5B4E14AA03707" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5CCF5E2C-E8CE-4944-B8FF-D8D069928B80",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E973FD01CB7CF706E2DC8FE96BC3438D812558C3" : "",
+    "D67BAA0B2862DE2177BBC2A0ECE5B4E14AA03707" : "ReactNativeDemo\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AwesomeProject",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios\/AwesomeProject.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jason0539\/ReactNativeDemo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D67BAA0B2862DE2177BBC2A0ECE5B4E14AA03707"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jason0539\/MyStudys.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E973FD01CB7CF706E2DC8FE96BC3438D812558C3"
+    }
+  ]
+}
