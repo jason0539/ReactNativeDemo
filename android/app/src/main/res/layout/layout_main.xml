@@ -17,4 +17,10 @@
             android:layout_height="wrap_content"
             android:text="JS页面跳转"
     />
+    <Button
+            android:id="@+id/btn_js_partofjs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="部分使用js"
+    />
 </LinearLayout>

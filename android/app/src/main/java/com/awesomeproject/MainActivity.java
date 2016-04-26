@@ -2,6 +2,7 @@ package com.awesomeproject;
 
 import com.awesomeproject.JsCallNaExample.CallNaActivity;
 import com.awesomeproject.NavigatorExample.NavigatorActivity;
+import com.awesomeproject.PartofJsExample.PartofJsActivity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -26,6 +27,14 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setClass(MainActivity.this, NavigatorActivity.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.btn_js_partofjs).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, PartofJsActivity.class);
                 startActivity(intent);
             }
         });
