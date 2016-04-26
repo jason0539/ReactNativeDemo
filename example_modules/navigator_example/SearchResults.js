@@ -47,14 +47,14 @@ class SearchResults extends Component {
     console.log('进入结果页');
     var dataSource = new ListView.DataSource({rowHasChanged: (r1, r2) => r1.guid !== r2.guid});
     this.state = {
-      dataSource: dataSource.cloneWithRows(this.props.SearchResults)
+      dataSource: dataSource.cloneWithRows(this.props.passSearchResult)
     };
     console.log('进入结果页2');
-    console.log(this.props.SearchResults);
+    console.log(this.props.passSearchResult);
   }
 
   rowPressed(propertyGuid) {
-    var property = this.props.SearchResults
+    var property = this.props.passSearchResult
       .filter(prop => prop.guid === propertyGuid)[0];
     this.props.navigator.push({
       name: 'PropertyView',

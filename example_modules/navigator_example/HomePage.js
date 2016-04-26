@@ -100,7 +100,7 @@ class HomePage extends Component {
       console.log('查询成功');
       this.props.navigator.push({
         name: 'SearchResults',
-        SearchResults: response.listings
+        passSearchResult: response.listings
       });
     } else {
       console.log('查询失败');

@@ -50,7 +50,7 @@ var RouteMapper = function(route, navigationOperations) {
                 </Text>
             </View>
           <SearchResults navigator={navigationOperations}
-                          SearchResults={route.SearchResults}/>
+                          passSearchResult={route.passSearchResult}/>
         </View>
     )
   }else if (route.name === 'PropertyView') {
