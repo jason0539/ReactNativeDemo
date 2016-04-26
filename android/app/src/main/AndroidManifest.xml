@@ -26,6 +26,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".JsCallNaExample.CallNaActivity"></activity>
+        <activity android:name=".JsCallNaWithCallbackExample.CallNaWithCbActivity"></activity>
         <activity android:name=".JsCallNaExample.NaActivity"></activity>
         <activity android:name=".NavigatorExample.NavigatorActivity"></activity>
         <activity android:name=".PartofJsExample.PartofJsActivity"></activity>

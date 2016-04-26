@@ -12,6 +12,12 @@
             android:text="JS调用NA方法"
     />
     <Button
+            android:id="@+id/btn_js_call_na_withcb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="JS调用NA方法加回调"
+    />
+    <Button
             android:id="@+id/btn_js_navagator"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

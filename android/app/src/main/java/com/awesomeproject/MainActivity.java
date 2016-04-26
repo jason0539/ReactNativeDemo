@@ -1,6 +1,7 @@
 package com.awesomeproject;
 
 import com.awesomeproject.JsCallNaExample.CallNaActivity;
+import com.awesomeproject.JsCallNaWithCallbackExample.CallNaWithCbActivity;
 import com.awesomeproject.NavigatorExample.NavigatorActivity;
 import com.awesomeproject.PartofJsExample.PartofJsActivity;
 
@@ -19,6 +20,14 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setClass(MainActivity.this, CallNaActivity.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.btn_js_call_na_withcb).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, CallNaWithCbActivity.class);
                 startActivity(intent);
             }
         });
