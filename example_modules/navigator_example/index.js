@@ -45,7 +45,7 @@ var RouteMapper = function(route, navigationOperations) {
     return (
         <View style={styles.container}>
           <View style={styles.titleContainer}>
-                <Text style={styles.titleText}>
+                <Text style={styles.titleText} onPress={onTitlePressed}>
                     ReactNativeDemo
                 </Text>
             </View>
@@ -59,7 +59,7 @@ var RouteMapper = function(route, navigationOperations) {
       return (
         <View style={styles.container}>
           <View style={styles.titleContainer}>
-                <Text style={styles.titleText}>
+                <Text style={styles.titleText} onPress={onTitlePressed}>
                     ReactNativeDemo
                 </Text>
             </View>
@@ -68,6 +68,10 @@ var RouteMapper = function(route, navigationOperations) {
         </View>
     )
   };
+};
+
+var onTitlePressed = function(){
+  _navigator.pop();
 };
 
 var NavigatorModule = React.createClass({
