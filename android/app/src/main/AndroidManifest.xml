@@ -30,6 +30,7 @@
         <activity android:name=".JsCallNaExample.NaActivity"></activity>
         <activity android:name=".NavigatorExample.NavigatorActivity"></activity>
         <activity android:name=".PartofJsExample.PartofJsActivity"></activity>
+        <activity android:name=".UseNaComponentExample.UseNaComponentActivity"></activity>
         <activity android:name="com.facebook.react.devsupport.DevSettingsActivity"/>
     </application>
 

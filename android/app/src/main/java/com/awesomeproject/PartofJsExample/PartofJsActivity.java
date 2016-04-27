@@ -1,6 +1,7 @@
 package com.awesomeproject.PartofJsExample;
 
 import com.awesomeproject.R;
+import com.awesomeproject.UseNaComponentExample.UseNaComponentPackage;
 import com.facebook.react.LifecycleState;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactRootView;
@@ -47,6 +48,7 @@ public class PartofJsActivity extends Activity implements DefaultHardwareBackBtn
                 .setBundleAssetName("index.android.bundle")
                 .setJSMainModuleName("index.android")
                 .addPackage(new MainReactPackage())
+                .addPackage(new UseNaComponentPackage())
                 .setUseDeveloperSupport(com.awesomeproject.BuildConfig.DEBUG)
                 .setInitialLifecycleState(LifecycleState.RESUMED)
                 .build();

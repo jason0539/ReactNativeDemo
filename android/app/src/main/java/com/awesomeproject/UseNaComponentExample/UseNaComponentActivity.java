@@ -1,18 +1,16 @@
-package com.awesomeproject.JsCallNaWithCallbackExample;
+package com.awesomeproject.UseNaComponentExample;
 
 import java.util.Arrays;
 import java.util.List;
 
-import com.awesomeproject.BuildConfig;
-import com.awesomeproject.UseNaComponentExample.UseNaComponentPackage;
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 
 /**
- * liuzhenhui 16/4/26.下午4:02
+ * liuzhenhui 16/4/27.上午11:22
  */
-public class CallNaWithCbActivity extends ReactActivity {
+public class UseNaComponentActivity extends ReactActivity {
     /**
      * Returns the name of the main component registered from JavaScript.
      * This is used to schedule rendering of the component.
@@ -20,7 +18,7 @@ public class CallNaWithCbActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "CallNaWithCbActivity";
+        return "UseNaComponentActivity";
     }
 
     /**
@@ -28,7 +26,7 @@ public class CallNaWithCbActivity extends ReactActivity {
      */
     @Override
     protected boolean getUseDeveloperSupport() {
-        return BuildConfig.DEBUG;
+        return true;
     }
 
     /**
@@ -41,8 +39,6 @@ public class CallNaWithCbActivity extends ReactActivity {
     protected List<ReactPackage> getPackages() {
         return Arrays.<ReactPackage>asList(
                 new MainReactPackage(),
-                new CallNaWithCallbackPackage(),
-                new UseNaComponentPackage()
-        );
+                new UseNaComponentPackage());
     }
 }

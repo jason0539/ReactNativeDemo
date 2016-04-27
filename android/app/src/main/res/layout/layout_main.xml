@@ -29,4 +29,10 @@
             android:layout_height="wrap_content"
             android:text="部分使用js并接收NA消息"
     />
+    <Button
+            android:id="@+id/btn_js_usena_component"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="JS中使用NA原生组件"
+    />
 </LinearLayout>

@@ -4,6 +4,7 @@ import com.awesomeproject.JsCallNaExample.CallNaActivity;
 import com.awesomeproject.JsCallNaWithCallbackExample.CallNaWithCbActivity;
 import com.awesomeproject.NavigatorExample.NavigatorActivity;
 import com.awesomeproject.PartofJsExample.PartofJsActivity;
+import com.awesomeproject.UseNaComponentExample.UseNaComponentActivity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -44,6 +45,14 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setClass(MainActivity.this, PartofJsActivity.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.btn_js_usena_component).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, UseNaComponentActivity.class);
                 startActivity(intent);
             }
         });
