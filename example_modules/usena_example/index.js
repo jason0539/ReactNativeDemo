@@ -46,7 +46,7 @@ var styles = StyleSheet.create({
   },
   textStyle:{
     fontSize:40,
-    backgroundColor:'#ffffff',
+    backgroundColor:'#dddddd',
     color:"#3385ff"
   },
 });
