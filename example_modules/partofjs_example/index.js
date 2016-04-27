@@ -8,21 +8,36 @@ var {
   View,
   ToastAndroid,
   StyleSheet,
+  Component,
+  DeviceEventEmitter,
 } = React;
 
-var PartOfJsModule = React.createClass({
+class PartOfJsModule extends Component{
+
+  constructor(props){
+    super(props);
+    this.state={
+      textStr:'Hey,这部分是JS',
+    }
+  }
+
+  componentWillMount(){
+    DeviceEventEmitter.addListener('keyboardWillShow', (data)=>{
+      this.setState({textStr:data.param});
+    });
+  }
 
   render() {
         return (
         <View style={styles.container}>
           <Text style={styles.textStyle}>
-            Hey,这部分是JS
+                {this.state.textStr}
           </Text>
         </View>
       );
-    }
+  }
     
-});
+};
 
 var styles = StyleSheet.create({
   container:{

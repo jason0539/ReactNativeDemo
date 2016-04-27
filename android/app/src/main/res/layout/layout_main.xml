@@ -27,6 +27,6 @@
             android:id="@+id/btn_js_partofjs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="部分使用js"
+            android:text="部分使用js并接收NA消息"
     />
 </LinearLayout>

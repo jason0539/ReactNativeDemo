@@ -4,19 +4,33 @@ import com.awesomeproject.R;
 import com.facebook.react.LifecycleState;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactRootView;
+import com.facebook.react.bridge.Arguments;
+import com.facebook.react.bridge.ReactContext;
+import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.modules.core.DefaultHardwareBackBtnHandler;
+import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.facebook.react.shell.MainReactPackage;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.KeyEvent;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 /**
  * liuzhenhui 16/4/26.上午9:58
  */
 public class PartofJsActivity extends Activity implements DefaultHardwareBackBtnHandler {
 
+    public static final String EVENT_NAME_EXAM = "keyboardWillShow";
+
+    private EditText mEtInput;
+    private Button mBtnSend;
+
     private ReactRootView mReactRootView;
+    private ReactContext mReactContext;
     private ReactInstanceManager mReactInstanceManager;
 
     @Override
@@ -24,7 +38,10 @@ public class PartofJsActivity extends Activity implements DefaultHardwareBackBtn
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_partofjs);
 
+        mEtInput = (EditText) findViewById(R.id.et_input);
+        mBtnSend = (Button) findViewById(R.id.btn_send_to_js);
         mReactRootView = (ReactRootView) findViewById(R.id.rn_part_of);
+
         mReactInstanceManager = ReactInstanceManager.builder()
                 .setApplication(getApplication())
                 .setBundleAssetName("index.android.bundle")
@@ -34,6 +51,23 @@ public class PartofJsActivity extends Activity implements DefaultHardwareBackBtn
                 .setInitialLifecycleState(LifecycleState.RESUMED)
                 .build();
         mReactRootView.startReactApplication(mReactInstanceManager, "PartOfJsActivity", null);
+
+        mBtnSend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String input = mEtInput.getText().toString().trim();
+                if (!TextUtils.isEmpty(input)) {
+                    WritableMap params = Arguments.createMap();
+                    params.putString("param", input);
+                    sendEventToJs(EVENT_NAME_EXAM, params);
+                }
+            }
+        });
+    }
+
+    private void sendEventToJs(String eventName, WritableMap params) {
+        mReactInstanceManager.getCurrentReactContext().getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+                .emit(eventName, params);
     }
 
     /**
