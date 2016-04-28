@@ -10,7 +10,7 @@ import android.webkit.WebViewClient;
 /**
  * liuzhenhui 16/4/27.上午11:31
  */
-public class ReactImageManager extends SimpleViewManager<WebView> {
+public class ReactWebviewManager extends SimpleViewManager<WebView> {
     public static final String REACT_CLASS = "RCTMyWebView";
 
     /**
