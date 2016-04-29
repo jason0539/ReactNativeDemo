@@ -11,33 +11,38 @@ var {
   Component,
 } = React;
 
-var WebView = require('./WebView');
+var MyWebView = require('./WebView');
 
-class UseNaModule extends Component{
+var UseNaModule = React.createClass({
 
-  constructor(props){
-    super(props);
-    this.state={
+  getInitialState(){
+    return({
       url:'http://www.youku.com/',
-    }
-  }
+      textStr:'JS部分文字',
+    })
+  },
 
-  componentWillMount(){
-  }
+  onWebViewScroll: function(event) {
+    this.setState({
+      textStr:'滑动距离:'+event,
+    });
+  },
 
   render() {
         return (
         <View style={styles.container}>
-          <WebView style={{width:400,height:400}} url={this.state.url}>
-          </WebView>
+          <MyWebView style={{width:400,height:400}} 
+                  url={this.state.url}
+                  onScrollChange={this.onWebViewScroll}>
+          </MyWebView>
           <Text style={styles.textStyle}>
-            JS部分文字
+            {this.state.textStr}
           </Text>
         </View>
       );
   }
     
-};
+});
 
 var styles = StyleSheet.create({
   container:{

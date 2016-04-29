@@ -5,12 +5,11 @@ import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
 
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 
 /**
  * liuzhenhui 16/4/27.上午11:31
  */
-public class ReactWebviewManager extends SimpleViewManager<WebView> {
+public class ReactWebviewManager extends SimpleViewManager<ObservableWebView> {
     public static final String REACT_CLASS = "RCTMyWebView";
 
     /**
@@ -28,16 +27,8 @@ public class ReactWebviewManager extends SimpleViewManager<WebView> {
      * @param reactContext
      */
     @Override
-    protected WebView createViewInstance(ThemedReactContext reactContext) {
-        WebView webView = new WebView(reactContext);
-        webView.setWebViewClient(new WebViewClient() {
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                view.loadUrl(url);
-                return true;
-            }
-        });
-        return webView;
+    protected ObservableWebView createViewInstance(ThemedReactContext reactContext) {
+        return new ObservableWebView(reactContext);
     }
 
     @ReactProp(name = "url")
