@@ -24,7 +24,7 @@ var UseNaModule = React.createClass({
 
   onWebViewScroll: function(event) {
     this.setState({
-      textStr:'滑动距离:'+event,
+      textStr:'Y方向滑动距离:'+event,
     });
   },
 
