@@ -9,9 +9,13 @@ var {
   ToastAndroid,
   StyleSheet,
   Component,
+  Dimensions,
 } = React;
 
 var MyWebView = require('./WebView');
+
+var WINDOW_WIDTH = Dimensions.get('window').width;
+var WINDOW_HEIGHT = Dimensions.get('window').height;
 
 var UseNaModule = React.createClass({
 
@@ -31,7 +35,7 @@ var UseNaModule = React.createClass({
   render() {
         return (
         <View style={styles.container}>
-          <MyWebView style={{width:400,height:400}} 
+          <MyWebView style={{width:WINDOW_WIDTH,height:WINDOW_HEIGHT*2/3}} 
                   url={this.state.url}
                   onScrollChange={this.onWebViewScroll}>
           </MyWebView>
